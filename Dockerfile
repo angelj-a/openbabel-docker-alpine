@@ -48,7 +48,8 @@ RUN cd ob-src/ \
 RUN cd ob-src/ \
    && make install \
    && export PATH="$PATH:/openbabel/bin" \
-   && export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/openbabel/lib"
+   && export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/openbabel/lib" \
+   && cd /tmp && rm -rf *
 
 ENV PYTHONPATH="/openbabel/lib/python3.7/site-packages/"
 
